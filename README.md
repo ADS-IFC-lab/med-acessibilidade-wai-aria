@@ -1,2 +1,2 @@
 # med-acessibilidade-wai-aria
-MED Acessibilidade e WAI-ARIA
+Material Educacional Digital (MED) sobre Acessibilidade e WAI-ARIA

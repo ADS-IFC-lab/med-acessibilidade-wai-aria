@@ -1,6 +1,13 @@
-# Material Educacional Digital (MED) sobre Acessibilidade e WAI-ARIA
-Instituto Federal Catarinense - Campus Fraiburgo
-Tecnologia em Análise e Desenvolvimento de Sistemas
-Desenvolvimento Web - 3a. fase
-Professor: Rafael Leonardo Vivian
-Estudantes: 
+# MED sobre Acessibilidade e WAI-ARIA
+Uma breve descrição do que o projeto faz e para quem é útil.
+## 📘 Informações
+- Instituto Federal Catarinense - Campus Fraiburgo
+- Tecnologia em Análise e Desenvolvimento de Sistemas
+- Desenvolvimento Web - 3a. fase
+- Professor: Rafael Leonardo Vivian
+- Estudantes: ???
+
+## 🛠️ Tecnologias Utilizadas
+
+- Linguagens: HTML e CSS
+- Biblioteca: Bootstrap

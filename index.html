@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Responsivo e Acessível</title>
+</head>
+<body>
+    <header role="banner">
+        <img src="logo.jpg" alt="Logotipo da instituição" title="Logotipo" />
+        <label for="toggle-menu" class="hamburguer" aria-label="Abrir menu de navegação">☰ Menu</label>
+        <input type="checkbox" id="toggle-menu" />
+        <nav class="mobile-menu" role="navigation" aria-label="Menu de navegação principal">
+            <a href="#" aria-label="Link para acessibilidade">Acessibilidade</a>
+            <a href="#" aria-label="Link para ferramentas">Ferramentas</a>
+            <a href="#" aria-label="Link para WAI-ARIA">WAI-ARIA</a>
+            <a href="#" aria-label="Link para contato">Contato</a>
+            <label for="mudar-tema">Alternar tema</label>
+            <input type="checkbox" id="mudar-tema" aria-label="Alternar tema claro/escuro" />
+        </nav>
+    </header>
+
+    <aside role="complementary" aria-label="Menu lateral">
+        <a href="#" aria-label="Ir para Início">Início</a>
+        <a href="#" aria-label="Ir para Seção de Título">Seção 1</a>
+        <a href="#" aria-label="Ir para Seção de Acessibilidade">Acessibilidade</a>
+        <a href="#" aria-label="Ir para Subtítulo">Subtítulo</a>
+        <a href="#" aria-label="Ir para Tópico 1">Tópico 1</a>
+        <a href="#" aria-label="Ir para Tópico 2">Tópico 2</a>
+        <a href="#" aria-label="Ir para Ferramentas">Ferramentas</a>
+        <a href="#" aria-label="Ir para Ferramenta 1">Ferramenta 1</a>
+        <a href="#" aria-label="Ir para Outra Seção">Seção 2</a>
+        <a href="#" aria-label="Ir para Outro Subtítulo">Subtítulo 2</a>
+        <a href="#" aria-label="Ir para Outro Subtítulo">Subtítulo 3</a>
+    </aside>
+
+    <main role="main" aria-label="Conteúdo principal">
+        <section id="texto-inicio">
+            <div id="titulo-site">
+                <h1>Título do Site</h1>
+            </div>
+            <div id="texto-timbarners-lee">
+                <blockquote>
+                    <h3>“O poder da web está em sua universalidade. O acesso por todas as pessoas, independentemente da deficiência, é um aspecto essencial”.
+                    — Tim Berners-Lee</h3>
+                </blockquote>
+                <img src="timbarners-lee.jpg" alt="Foto de Tim Berners-Lee, criador da Web" title="Tim Berners-Lee" />
+            </div>
+        </section>
+
+        <section id="textos-site">
+            <article aria-label="Texto introdutório sobre acessibilidade">
+                <h2>Acessibilidade na Web</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum justo at turpis efficitur...</p>
+            </article>
+            <article aria-label="Texto sobre usabilidade e otimização">
+                <h2>Usabilidade e Otimização</h2>
+                <p>A acessibilidade, além de ser um direito, melhora a usabilidade e atende exigências legais...</p>
+            </article>
+        </section>
+
+        <section aria-label="Explicação sobre tópicos">
+            <h2>Práticas Recomendadas</h2>
+            <div class="topico-1">
+                <div class="texto-topico-1">
+                    <h3>Tópico 1</h3>
+                    <p>Utilização de elementos HTML adequados como &lt;header&gt;, &lt;nav&gt;, &lt;section&gt; etc.</p>
+                </div>
+                <div class="imagem-topico-1">
+                    <img src="topico-1.jpg" alt="Ilustração sobre uso de elementos HTML semânticos" title="Imagem do Tópico 1" />
+                    <p id="legenda-imagem-topico-1">Legenda da Imagem</p>
+                </div>
+            </div>
+
+            <div class="topico-2">
+                <div class="texto-topico-2">
+                    <h3>Tópico 2</h3>
+                    <p>O HTML permite a inclusão de atributos específicos para melhorar a acessibilidade.</p>
+                </div>
+                <div class="imagem-topico-2">
+                    <img src="topico-2.jpg" alt="Imagem sobre atributos de acessibilidade no HTML" title="Imagem do Tópico 2" />
+                    <p id="legenda-imagem-topico-2">Legenda da Imagem</p>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="Vídeo sobre ferramentas de acessibilidade">
+            <h2>Vídeo Explicativo</h2>
+            <h4>Principais ferramentas em acessibilidade digital</h4>
+            <iframe src="https://www.youtube.com/embed/eV4UcOAIP-4"
+                title="Vídeo explicativo sobre ferramentas de acessibilidade"
+                width="420" height="315" frameborder="0" allowfullscreen></iframe>
+            <h4>Legenda do vídeo</h4>
+        </section>
+
+        <section class="ferramentas" aria-label="Lista de ferramentas com descrições">
+            <div class="texto-ferramentas">
+                <button aria-label="Ver mais detalhes da Ferramenta 1">Ver mais</button>
+                <p>Ferramenta 1 - descrição...</p>
+            </div>
+            <div class="texto-ferramentas">
+                <button aria-label="Ver mais detalhes da Ferramenta 2">Ver mais</button>
+                <p>Ferramenta 2 - descrição...</p>
+            </div>
+            <div class="texto-ferramentas">
+                <button aria-label="Ver mais detalhes da Ferramenta 3">Ver mais</button>
+                <p>Ferramenta 3 - descrição...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <section aria-label="Fontes utilizadas">
+            <h2>Fontes</h2>
+            <a href="#" aria-label="Fonte 1">link_1</a>
+            <a href="#" aria-label="Fonte 2">link_2</a>
+            <a href="#" aria-label="Fonte 3">link_3</a>
+        </section>
+
+        <section aria-label="Informações institucionais">
+            <div class="titulo-informacoes">
+                <img src="logo-ifc" alt="Logotipo do IFC Fraiburgo" title="Logotipo IFC" />
+                <h2>Informações</h2>
+            </div>
+            <p>
+                IFC Fraiburgo - Análise e Desenvolvimento de Sistemas<br />
+                Instituto Federal Catarinense - Campus Fraiburgo<br />
+                Rua Cruz e Souza, 89 - Jardim das Araucárias - CEP 89580-000 - Fraiburgo - SC - Fone (49) 3202-8800
+            </p>
+        </section>
+
+        <section aria-label="Contatos">
+            <h2>Contatos</h2>
+            <ul>
+                <li><a href="#" aria-label="Email 1">Email_1</a></li>
+                <li><a href="#" aria-label="Email 2">Email_2</a></li>
+                <li><a href="#" aria-label="Email 3">Email_3</a></li>
+                <li><a href="#" aria-label="Email 4">Email_4</a></li>
+                <li><a href="#" aria-label="Email 5">Email_5</a></li>
+                <li><a href="#" aria-label="Email 6">Email_6</a></li>
+                <li><a href="#" aria-label="Email 7">Email_7</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

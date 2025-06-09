@@ -31,7 +31,8 @@ rafael.vivian@ifc.edu.br
 
 ![Wireframe - 1](https://github.com/user-attachments/assets/7218ed6c-a7cf-42ce-b8d7-0d10d4decdfa)
 
-![Pesquisa](https://docs.google.com/document/d/1N4d5flKI9uxsyJsyqTXi5aAS6YlozK7lgOzQ9MiIGAo/edit?tab=t.0#heading=h.8kk7sm8oc9fo)
+## 📄 Pesquisa
+https://docs.google.com/document/d/1N4d5flKI9uxsyJsyqTXi5aAS6YlozK7lgOzQ9MiIGAo/edit?usp=sharing
 
 ---
 

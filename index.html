@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+    crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/c8de44c573.js" crossorigin="anonymous"></script>
+
+    <title>WAI-ARIA & Acessibilidade</title>
+</head>
+<body>
+<nav class="navbar bg-success navbar-dark fixed-top" role="banner">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand mb-0" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DXcwyexkm85zOV_Il36DbFbTPi8-u1xb9A&s" alt="Logotipo da instituição" title="Logotipo" width="40" height="32">
+            </a>
+        </div>
+
+        <div class="d-flex justify-content-center flex-grow-1">
+            <a class="nav-link text-white mx-3" href="#textos-site">Acessibilidade <i class="fa-solid fa-person"></i></a>
+            <a class="nav-link text-white mx-3" href="#Ferramentas">Ferramentas <i class="fa-solid fa-screwdriver-wrench"></i></a>
+            <a class="nav-link text-white mx-3" href="#wai-aria">WAI-ARIA <i class="fa-solid fa-code"></i></a>
+            <a class="nav-link text-white mx-3" href="#Contatos">Contato <i class="fa-solid fa-address-book"></i></a>
+        </div>
+
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start bg-success text-white" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" role="complementary" aria-label="Menu lateral">
+    <div class="offcanvas-header border-bottom border-white">
+        <h5 class="offcanvas-title fw-bold fs-3" id="offcanvasMenuLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="nav flex-column">
+
+            <p class="fw-bold fs-5 mb-2">&bull;Acessibilidade</p>
+            <a class="nav-link text-white ps-3 mb-1" href="#textos-site">Acessibilidade</a>
+            <a class="nav-link text-white ps-3 mb-1" href="#principios">Semântica</a>
+            <a class="nav-link text-white ps-3 mb-1" href="#atributos">Atributos</a>
+            <a class="nav-link text-white ps-3 mb-1" href="#legislacao">Legislacao</a>
+            <a class="nav-link text-white ps-3 mb-3" href="#Ferramentas">Ferramentas</a>
+            
+
+            <p class="fw-bold fs-5 mb-2">&bull;WAI-ARIA</p>
+            <a class="nav-link text-white ps-3 mb-1" href="#wai-aria">WAI-ARIA</a>
+            <a class="nav-link text-white ps-3 mb-1" href="#wai-aria-praticas">Boas Práticas & Funções</a>
+            <a class="nav-link text-white ps-3 mb-1" href="#wai-aria-exemplos">Exemplos</a>
+
+        </nav>
+    </div>
+</div>
+
+    <main role="main" aria-label="Conteúdo principal">
+        <section id="texto-inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>WAI-ARIA & Acessibilidade</h1>
+                <blockquote>
+                    <h3>“O poder da web está em sua universalidade. O acesso por todas as pessoas, independentemente da deficiência, é um aspecto essencial”.<br>
+                    — Tim Berners-Lee</h3>
+                </blockquote>
+            </div>
+        </section>
+
+
+        <section id="textos-site" class="texto-section">
+            <article aria-label="Texto introdutório sobre acessibilidade">
+                <h2>Acessibilidade na Web</h2>
+                <p>A Web é projetada com o propósito de ter acessibilidade universal,
+                    independentemente de seu hardware, software, idioma,
+                    localização ou capacidade que possui. Quando esse objetivo é atingido,
+                    o ambiente digital torna-se acessível a pessoas com diferentes graus de
+                    limitação auditiva, motora, visual ou cognitiva, promovendo a inclusão e
+                    garantindo acesso à informação e aos serviços online.
+                </p>
+            </article>
+            <article aria-label="Texto sobre usabilidade e otimização">
+                <h2>Usabilidade e Otimização</h2>
+                <p>
+                A acessibilidade além de ser um direito e atender exigências legais, ela melhora a
+                usabilidade geral, reduz taxas de rejeição, aumenta conversão, otimização e
+                performance. Práticas como uso correto de texto alternativo em imagens, hierarquia
+                semântica de títulos e navegação bem estruturada facilitam a indexação por buscadores
+                </p>
+            </article>
+        </section>
+
+        <section aria-label="Explicação sobre tópicos">
+            <h2>Práticas Recomendadas</h2>
+            <div class="topico-1" id="principios">
+                <div class="texto-topico-1">
+                    <h3>HTML Semântico</h3>
+                    <p>Utilização de elementos HTML
+                        adequados como &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;,
+                        &lt;footer&gt;, &lt;aside&gt;, &lt;main&gt;, &lt;article&gt; são ideais
+                        para fornecer um conteúdo claro e
+                        objetivo, o que facilita a interpretação por
+                        outras tecnologias. Manter uma hierarquia semântica
+                        bem definida melhora a classificação por mecanismos  de busca,
+                        o que contribui para a manutenção e escalabilidade do código.
+                    </p>
+                </div>
+                <div class="imagem-topico-1">
+                    <img src="https://www.w3schools.com/html/img_sem_elements.gif" alt="Ilustração sobre uso de elementos HTML semânticos" title="Imagem do Tópico 1" />
+                    <p id="legenda-imagem-topico-1">Fonte: W3Schools, 2025</p>
+                </div>
+            </div>
+
+            <div class="topico-2" id="atributos">
+                <div class="texto-topico-2">
+                    <h3>Atributos de acessibilidade</h3>
+                    <p>
+                        O HTML permite a inclusão de atributos específicos para melhorar a acessibilidade como<br><br>
+                        &bull; Alt em imagens: Proporciona uma descrição textual para imagens, auxiliando usuários que utilizam leitores de tela<br>
+                        &bull; Title e aria-label: Fornecem informações adicionais para elementos, melhorando a interação<br>
+                        &bull; Tabindex: Define a ordem de navegação pelo teclado, facilitando a acessibilidade para usuários que não utilizam mouse<br>
+                        &bull; Role: Define o propósito de elementos para tecnologias assistivas<br>
+                    </p>
+                </div>
+                <div class="imagem-topico-2">
+                    <img src="https://miro.medium.com/v2/resize:fit:808/1*CS8YcxpYS9iCdrTM52Gx0A.png" alt="Imagem sobre atributos de acessibilidade no HTML" title="Imagem do Tópico 2" />
+                    <p id="legenda-imagem-topico-2">Fonte: Medium, 2025</p>
+                </div>
+            </div>
+
+            <hr class="divisor-verde"/>
+
+            <div class="topico-3 text-center" id="legislacao">
+                <div class="texto-topico-3 mx-auto text-justify px-3 px-md-5">
+                    <h3>Leis, Diretrizes e Sua Importância na Sociedade</h3>
+                    <p>
+                        A acessibilidade é um princípio fundamental para garantir a inclusão
+                        de todas as pessoas, independentemente de suas condições. No contexto
+                        digital e físico, ela desempenha um papel essencial na promoção da igualdade,
+                        permitindo que indivíduos com deficiência tenham oportunidades e direitos
+                        equivalentes aos demais cidadãos. Diversas leis e diretrizes internacionais
+                        e nacionais foram criadas para assegurar isso, as quais destacam-se:
+                        Diretrizes de Acessibilidade para Conteúdo Web (WCAG) e a Lei Brasileira de Inclusão (LBI).
+                    </p>
+
+                    <hr class="divisor-verde"/>
+
+                    <div class="mt-4">
+                        <p>
+                            <strong class="text-success fw-bold">&#9675; Web Content Accessibility Guidelines (WCAG)</strong> é um conjunto de diretrizes estabelecido pelo World Wide Web Consortium (W3C) para tornar o conteúdo digital acessível a todas as pessoas, incluindo aquelas com deficiência. Essas diretrizes são divididas em três níveis de conformidade:
+                        </p>
+                        <p>
+                            <span class="text-success fw-bold">&bull;WCAG 2.0 e 2.1:</span> Atualizações que abrangem aspectos essenciais de acessibilidade digital.
+                        </p>
+                        <p>
+                            <span class="text-success fw-bold">&bull;WCAG 2.2:</span> Introdução de novos critérios para melhorar ainda mais a experiência de usuários com deficiência.
+                        </p>
+
+                        <p class="mt-4">
+                            <strong class="text-success fw-bold">&#9675; Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei nº 13.146/2015)</strong> é um marco legal que regulamenta direitos fundamentais para a inclusão social e cidadania de pessoas com deficiência no Brasil. Essa lei abrange diversos aspectos, como acessibilidade digital, mobilidade, trabalho e educação:
+                        </p>
+                        <p>
+                            <span class="text-success fw-bold">&bull;Direito ao acesso digital:</span> Empresas e órgãos públicos devem garantir que seus sites sejam acessíveis.
+                        </p>
+                        <p>
+                            <span class="text-success fw-bold">&bull;Adaptação arquitetônica:</span> Estabelecimentos devem oferecer infraestrutura adequada para pessoas com mobilidade reduzida.
+                        </p>
+                        <p>
+                            <span class="text-success fw-bold">&bull;Inclusão no mercado de trabalho:</span> Empresas com mais de 100 funcionários precisam reservar vagas para trabalhadores com deficiência.
+                        </p>
+                        <p>
+                            <span class="text-success fw-bold">&bull;Educação inclusiva:</span> Escolas e universidades devem fornecer suporte para estudantes com deficiência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="Vídeo sobre ferramentas de acessibilidade" id="Ferramentas">
+            <h2>Vídeo Explicativo</h2>
+            <h4>Principais ferramentas em acessibilidade digital</h4>
+            <iframe src="https://www.youtube.com/embed/CscNhdbjAMc"
+                title="Vídeo explicativo sobre ferramentas de acessibilidade"
+                width="850" height="450" frameborder="0" allowfullscreen></iframe>
+            <h4>Tornar uma página acessível é permitir que diferentes tipos de pessoas,
+                com deficiência ou não, possam chegar aos conteúdos e compreendê-los com autonomia.</h4>
+        </section>
+
+<section class="ferramentas py-4" aria-label="Lista de ferramentas com descrições">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <h2 class="text-start mb-4">Ferramentas</h2>
+                
+                <div class="texto-ferramentas mb-3 p-3 border rounded text-start">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 fw-bold">Leitores de tela</p>
+                        <button class="btn btn-success" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#ferramenta1" 
+                                aria-expanded="false" 
+                                aria-controls="ferramenta1"
+                                onclick="toggleButtonText(this)">
+                            Ver mais <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="ferramenta1">
+                        <p>
+                            Os leitores de tela são softwares que convertem texto digital em áudio,
+                            permitindo que pessoas cegas ou com baixa visão naveguem na web,
+                            utilizem aplicativos e acessem documentos. Eles são compatíveis com
+                            sistemas operacionais e dispositivos móveis, sendo essenciais para a
+                            acessibilidade digital.
+                        </p>
+
+                        <p class="text-success fw-bold">&bull; Principais Leitores de Tela:</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="text-success fw-bold">
+                                    <img src="https://www.nvaccess.org/images/logo-nvda.svg" alt="Logo NVDA">
+                                    NVDA (NonVisual Desktop Access)
+                                </span> — Gratuito e popular entre usuários de Windows.
+                            </li>
+                            <li>
+                                <span class="text-success fw-bold">
+                                    <img src="https://www.freedomscientific.com/wp-content/uploads/logo-jaws.svg" alt="Logo JAWS">
+                                    JAWS (Job Access With Speech)
+                                </span> — Um dos mais completos, utilizado por muitos profissionais.
+                            </li>
+                            <li>
+                                <span class="text-success fw-bold">
+                                    <i class="fab fa-apple" aria-hidden="true"></i>
+                                    VoiceOver
+                                </span> — Integrado aos dispositivos da Apple (Mac, iPhone e iPad).
+                            </li>
+                            <li>
+                                <span class="text-success fw-bold">
+                                    <i class="fab fa-android" aria-hidden="true"></i>
+                                    TalkBack
+                                </span> — Recurso nativo do Android para acessibilidade.
+                            </li>
+                        </ul>
+
+                        <p class="text-success fw-bold">&bull; Funcionalidades dos Leitores de Tela:</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Leitura de textos, botões e menus</strong>
+                                </div>
+                                <span class="badge bg-success">HTML Tags: &lt;button&gt;, &lt;nav&gt;, &lt;menu&gt;, &lt;aria-label&gt;</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Identificação de imagens com descrição alternativa</strong>
+                                </div>
+                                <span class="badge bg-success">HTML Tags: &lt;img alt=""&gt;</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Compatibilidade com comandos de voz e teclado</strong>
+                                </div>
+                                <span class="badge bg-success">HTML Tags: &lt;input&gt;, &lt;button&gt;, &lt;aria-keyshortcuts&gt;</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Suporte a navegação por atalhos</strong>
+                                </div>
+                                <span class="badge bg-success">HTML Tags: &lt;skip-link&gt;, &lt;accesskey&gt;, &lt;aria-label&gt;</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="texto-ferramentas mb-3 p-3 border rounded text-start">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 fw-bold">Softwares de Comando por Voz</p>
+                        <button class="btn btn-success" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#ferramenta2" 
+                                aria-expanded="false" 
+                                aria-controls="ferramenta2"
+                                onclick="toggleButtonText(this)">
+                            Ver mais <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="ferramenta2">
+                        <p class="text-success fw-bold">&bull; Comando por Voz:</p>
+                        <p>
+                            Os softwares de comando por voz possibilitam a interação com dispositivos sem necessidade de teclado ou mouse.
+                            São essenciais para pessoas com deficiência motora que precisam executar tarefas por meio da fala.
+                        </p>
+
+                        <p class="text-success fw-bold">&bull; Exemplos de Softwares de Comando por Voz:</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>
+                                        <img src="https://upload.wikimedia.org/wikipedia/en/7/71/Nuance_Dragon_NaturallySpeaking_logo.png"
+                                            alt="Logo Dragon NaturallySpeaking"
+                                            style="width:24px; height:24px; vertical-align:middle; margin-right:5px;">
+                                        Dragon NaturallySpeaking
+                                    </strong> — Permite ditar textos e controlar computadores por voz.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Speech-to-Text API</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>
+                                        <i class="fab fa-google" style="margin-right:5px;"></i> Google Assistant,
+                                        <i class="fab fa-apple" style="margin-left:10px; margin-right:5px;"></i> Siri,
+                                        <i class="fab fa-microsoft" style="margin-left:10px; margin-right:5px;"></i> Cortana
+                                    </strong> — Assistentes virtuais que realizam comandos por fala.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: AI Assistants</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>
+                                        <i class="fab fa-microsoft" style="margin-right:5px;"></i> Microsoft Dictate
+                                    </strong> — Ferramenta integrada ao Microsoft 365 para digitação por voz.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Office Add-in, Speech API</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="texto-ferramentas mb-3 p-3 border rounded text-start">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 fw-bold">Teclados Adaptados</p>
+                        <button class="btn btn-success" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#ferramenta3" 
+                                aria-expanded="false" 
+                                aria-controls="ferramenta3"
+                                onclick="toggleButtonText(this)">
+                            Ver mais <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="ferramenta3">
+                        <p class="text-success fw-bold">&bull; Hardware Adaptados:</p>
+                        <p>
+                            Os teclados adaptados são projetados para atender diferentes necessidades motoras e visuais.
+                            Eles ajudam pessoas com dificuldades de coordenação ou baixa visão a digitarem com mais facilidade.
+                        </p>
+
+                        <p class="text-success fw-bold">&bull; Tipos de Teclados Adaptados:</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Teclado ampliado</strong> — Possui teclas maiores para facilitar a digitação.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Hardware personalizado</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Teclado em braille</strong> — Adaptado para pessoas cegas, com caracteres táteis.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Braille, Interface tátil</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Teclado virtual</strong> — Disponível na tela do computador ou celular.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Software On-Screen Keyboard</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Teclado controlado por movimentos oculares</strong> — Ideal para pessoas com limitações motoras severas.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Eye-tracking, Assistive Hardware</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="texto-ferramentas mb-3 p-3 border rounded text-start">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 fw-bold">Mouses e Dispositivos Alternativos</p>
+                        <button class="btn btn-success" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#ferramenta4" 
+                                aria-expanded="false" 
+                                aria-controls="ferramenta4"
+                                onclick="toggleButtonText(this)">
+                            Ver mais <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="ferramenta4">
+                        <p class="text-success fw-bold">&bull; Alternativas ao Mouse Tradicional:</p>
+                        <p>
+                            Para aqueles que têm dificuldades em usar um mouse tradicional, existem várias alternativas tecnológicas:
+                        </p>
+
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Mouse de cabeça</strong> — Controlado pelos movimentos da cabeça.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Head-tracking</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Mouse ocular (eye-tracking)</strong> — Usa sensores para detectar o movimento dos olhos e mover o cursor.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Eye-tracking</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Trackballs</strong> — Substituem o mouse tradicional, exigindo menos movimento para controle.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Hardware alternativo</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <strong>Joystick adaptado</strong> — Pode ser usado para navegação em computadores ou jogos.
+                                </div>
+                                <span class="badge bg-success">Tecnologia: Joystick assistivo</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="divisor-verde"/>
+
+<section aria-label="hero-wai-aria" class="hero-wai-aria text-white text-center d-flex align-items-center" id="wai-aria">
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="bg-success bg-opacity-75 p-4 rounded">
+            <h1 class="display-4 fw-bold">Introdução ao WAI-ARIA</h1>
+            <p class="lead mt-3">
+                O WAI-ARIA (Accessible Rich Internet Applications) é um conjunto de especificações que melhora a
+                acessibilidade de conteúdos e interfaces web dinâmicas. Com ele, é possível tornar aplicações mais inclusivas
+                para pessoas que utilizam tecnologias assistivas, como leitores de tela.
+            </p>
+        </div>
+    </div>
+    <div style="
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    "></div>
+</section>
+
+<hr class="divisor-verde"/>
+
+<section class="texto-section">
+    <article aria-label="Texto introdutório sobre WAI-ARIA">
+        <h2>WAI-ARIA</h2>
+        <p>
+            A WAI-ARIA foi inicialmente publicada em 2008 pelo Web Accessibility Initiative (WAI),
+            um grupo de trabalho do World Wide Web Consortium (W3C) responsável por definir padrões para a Web.
+            Segundo o WAI, a especificação WAI-ARIA estabelece um conjunto de atributos que tornam o conteúdo
+            dinâmico e os controles avançados de interfaces — desenvolvidos com HTML, JavaScript e tecnologias correlatas —
+            mais acessíveis a pessoas com deficiência. Esses atributos informam a função, o estado e as propriedades dos elementos
+            às tecnologias assistivas, por meio das APIs de acessibilidade presentes nos navegadores modernos.
+        </p>
+    </article>
+</section>
+
+<section id="wai-aria-praticas" class="container-fluid py-5">
+    <article aria-label="Boas práticas gerais para acessibilidade e uso de WAI-ARIA">
+        <div class="row align-items-center justify-content-center">
+
+            <div class="col-md-3 d-flex flex-column justify-content-center text-center">
+                <h2>Boas Práticas Gerais</h2>
+                <p>
+                    Manter o foco na acessibilidade envolve adotar práticas gerais que beneficiem o maior número possível de pessoas, sem se limitar a uma deficiência específica. Para isso, recomenda-se:
+                </p>
+                <p>
+                    <strong>HTML organizado:</strong> uma marcação semântica e hierárquica facilita tanto a leitura humana quanto a detecção de onde aplicar a ARIA.
+                </p>
+                <p>
+                    <strong>Tipografia e cores legíveis:</strong> escolha de fontes apropriadas e contrastes adequados, além de não depender exclusivamente da cor para transmitir informação.
+                </p>
+                <p>
+                    <strong>Código limpo:</strong> estruturas claras tornam simples identificar quando e onde incluir atributos ARIA.
+                </p>
+            </div>
+
+            <div class="col-md-5 d-flex flex-column justify-content-center">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*7yv8yN357ITbvW9penUBDA.png" alt="Imagem representando boas práticas de WAI-ARIA" class="img-fluid">
+                <p id="legenda-imagem-topico-1">Fonte: Medium, 2025</p>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column justify-content-center text-center">
+                <h2>Funções Essenciais do WAI-ARIA</h2>
+                <p>
+                    O uso de WAI-ARIA cumpre duas funções essenciais:
+                </p>
+                <p>
+                    <strong>Aprimorar a experiência de leitores de tela:</strong> guiando o usuário por meio de informações de função, estado e propriedade dos componentes.
+                </p>
+                <p>
+                    <strong>Servir como critério de validação:</strong> garantindo que o HTML esteja em conformidade com padrões de acessibilidade.
+                </p>
+                <p>
+                    A especificação ARIA consiste em três conjuntos de atributos — <strong>funções (roles)</strong>, <strong>estados (states)</strong> e <strong>propriedades (properties)</strong> — que permitem às tecnologias assistivas reconhecer e interagir corretamente com os elementos da interface.
+                </p>
+            </div>
+
+        </div>
+    </article>
+</section>
+
+<hr class="divisor-verde"/>
+
+<section class="wai-aria-colapse py-4" aria-label="Lista de usos, Roles, States, Properties" id="wai-aria-exemplos">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-16">
+
+        <h2 class="text-start mb-4">Exemplos</h2>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="texto-wai-aria-colapse p-3 border rounded text-start h-100 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <p class="mb-0 fw-bold">ROLES</p>
+                <button class="btn btn-success" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#role" 
+                        aria-expanded="false" 
+                        aria-controls="role"
+                        onclick="toggleButtonText(this)">
+                  Ver mais <i class="fa-solid fa-angle-down"></i>
+                </button>
+              </div>
+              <div class="collapse" id="role">
+                <p class="text-success fw-bold">&bull; Roles ARIA</p>
+                <p>
+                As Roles ARIA (Funções/Papéis) definem o que um elemento é ou faz.
+                Ela pode definir roles que não estão disponíveis em HTML e também pode
+                substituir determinadas funções-padrão dos elementos HTML. Um exemplo de role é
+                <br><br><strong>&lt;form role="search"&gt;</strong><br><br> Em HTML, todos os formulários têm a mesma semântica.
+                Mas, com o ARIA, é possível definir a semântica de um formulário específico
+                como sendo um formulário de pesquisa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="texto-wai-aria-colapse p-3 border rounded text-start h-100 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <p class="mb-0 fw-bold">STATES</p>
+                <button class="btn btn-success" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#state" 
+                        aria-expanded="false" 
+                        aria-controls="state"
+                        onclick="toggleButtonText(this)">
+                  Ver mais <i class="fa-solid fa-angle-down"></i>
+                </button>
+              </div>
+              <div class="collapse" id="state">
+                <p class="text-success fw-bold">&bull; States Aria</p>
+                <p>
+                  Os States ARIA (Estados) são atributos que definem a condição atual de um elemento.
+                  Eles geralmente mudam com base na interação feita ou em alguma variável dinâmica.
+                  Um exemplo é:<br><br><strong>&lt;input aria-invalid="true"&gt;</strong><br><br> Essa propriedade fará com
+                  que um leitor de tela leia essa entrada como inválida no momento
+                  (o que significa que precisa ser corrigida), mas esse valor de estado pode ser
+                  facilmente alterado para false dinamicamente com base no que é preenchido.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="texto-wai-aria-colapse p-3 border rounded text-start h-100 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <p class="mb-0 fw-bold">PROPERTIES</p>
+                <button class="btn btn-success" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#properties" 
+                        aria-expanded="false" 
+                        aria-controls="properties"
+                        onclick="toggleButtonText(this)">
+                  Ver mais <i class="fa-solid fa-angle-down"></i>
+                </button>
+              </div>
+              <div class="collapse" id="properties">
+                <p class="text-success fw-bold">&bull; Properties ARIA</p>
+                <p>
+                    As Properties ARIA definem semânticas adicionais não suportadas
+                    no HTML padrão. Um exemplo é:
+                    <br><br><strong>&lt;button aria-haspopup="true"&gt;</strong><br><br>
+                    essa propriedade estende o botão padrão para fazer com que um leitor de
+                    tela anuncie que o botão, se ativado, acionará um pop-up.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divisor-verde"/>
+
+</main>
+
+    <footer role="contentinfo">
+    <div class="footer-top">
+        <section aria-label="Fontes utilizadas">
+            <h2>Fontes</h2>
+            <a href="https://www.w3.org" aria-label="Fonte 1">Web Content Accessibility Guidelines - W3C&reg;</a><br><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets" aria-label="Fonte 2">Visão geral da acessibilidade nas aplicações web e widgets - Mozilla&trade;</a><br><br>
+            <a href="https://desenvolvimentoparaweb.com/miscelanea/aria-acessibilidade-web-a11y/" aria-label="Fonte 3">Introdução à ARIA para acessibilidade na Web - DPW</a>
+        </section>
+
+        <section aria-label="Informações institucionais">
+            <div class="titulo-informacoes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DXcwyexkm85zOV_Il36DbFbTPi8-u1xb9A&s" alt="Logotipo do IFC Fraiburgo" title="Logotipo IFC" />
+                <h2>Informações</h2>
+            </div>
+            <p>
+                IFC Fraiburgo - Análise e Desenvolvimento de Sistemas<br />
+                Instituto Federal Catarinense - Campus Fraiburgo<br />
+                Rua Cruz e Souza, 89 - Jardim das Araucárias - CEP 89580-000 - Fraiburgo - SC - Fone (49) 3202-8800
+            </p>
+        </section>
+
+        <section aria-label="Contatos" id="Contatos">
+            <h2>Contatos</h2>
+            <ul>
+                <li><a href="https://github.com/jpdevr" aria-label="Email 1">joaogapires@gmail.com  <i class="fa-brands fa-github"></i> jpdevr</a></li>
+                <li><a href="https://github.com/AndressasAntunes" aria-label="Email 2">andressaantunesdev@gmail.com  <i class="fa-brands fa-github"></i> AndressasAntunes</a></li>
+                <li><a href="https://github.com/raquelmarafon" aria-label="Email 3">raquelbmarafon@gmail.com  <i class="fa-brands fa-github"></i> raquelmarafon</a></li>
+                <li><a href="https://github.com/LauraUrba" aria-label="Email 4">urbaantuneslaura@gmail.com  <i class="fa-brands fa-github"></i> LauraUrba</a></li>
+                <li><a href="https://github.com/Yorih123" aria-label="Email 5">yuribargas@gmail.com  <i class="fa-brands fa-github"></i> Yorih123</a></li>
+                <li><a href="https://github.com/samueldolberth" aria-label="Email 6">samudolberth@gmail.com  <i class="fa-brands fa-github"></i> samueldolberth</a></li>
+                <li><a href="https://github.com/jvzeris" aria-label="Email 7">jvzeris@gmail.com  <i class="fa-brands fa-github"></i> jvzeris</a></li>
+            </ul>
+        </section>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

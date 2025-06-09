@@ -6,7 +6,7 @@ Este projeto é um Material de Educacional Digital (MED) desenvolvido para estud
 - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
 - Disciplina: Desenvolvimento Web - 3a. fase
 - Professor: Rafael Leonardo Vivian
-- Estudantes: Andressa Antunes, João Pedro de Aquino, Laura Antunes, Raquel Marafon, Samuel Dolberth, Yuri Oliveira
+- Estudantes: Andressa Antunes, João Pedro de Aquino, Laura Antunes, Raquel Marafon, Samuel Dolberth, Yuri Oliveira, João Vítor Oliveira da Inhaia
 
 ## 🎯 Objetivo
 O objetivo deste MED é apresentar conteúdo sobre:

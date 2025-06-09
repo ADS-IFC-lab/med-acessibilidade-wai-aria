@@ -1,7 +1,7 @@
 # MED sobre Acessibilidade e WAI-ARIA
 Este projeto é um Material de Educacional Digital (MED) desenvolvido para estudantes de Desenvolvimento Web que desejam aprender sobre Acessibilidade Web e WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
 
-## 📘 Informações
+## 📘 Informações Acadêmicas
 - Instituição: Instituto Federal Catarinense - Campus Fraiburgo
 - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
 - Disciplina: Desenvolvimento Web - 3a. fase

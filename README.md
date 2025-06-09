@@ -27,3 +27,8 @@ Este projeto está sob a licença MIT.
 
 ## 📬 Contato
 rafael.vivian@ifc.edu.br
+
+---
+
+*Desenvolvido com 💚 e ♿ pelos estudantes da 3a. fase do curso ADS do IFC - Campus Fraiburgo.*  
+*"A web deve ser acessível a todos, independentemente de suas habilidades ou deficiências."*

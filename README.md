@@ -1,16 +1,26 @@
 # MED sobre Acessibilidade e WAI-ARIA
-Uma breve descrição do que o projeto faz e para quem é útil.
+Este projeto é um Material de Educacional Digital (MED) desenvolvido para estudantes de Desenvolvimento Web que desejam aprender sobre Acessibilidade Web e WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
 
 ## 📘 Informações
-- Instituto Federal Catarinense - Campus Fraiburgo
-- Tecnologia em Análise e Desenvolvimento de Sistemas
-- Desenvolvimento Web - 3a. fase
+- Instituição: Instituto Federal Catarinense - Campus Fraiburgo
+- Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
+- Disciplina: Desenvolvimento Web - 3a. fase
 - Professor: Rafael Leonardo Vivian
 - Estudantes: Andressa Antunes, João Pedro de Aquino, Laura Antunes, Raquel Marafon, Samuel Dolberth, Yuri Oliveira
+
+## 🎯 Objetivo
+O objetivo deste MED é apresentar conteúdo sobre:
+- Fundamentos da acessibilidade web
+- Diretrizes WCAG (Web Content Accessibility Guidelines)
+- Implementação de WAI-ARIA para interfaces
+- Técnicas para tornar aplicações web inclusivas
+- Testes de acessibilidade e validação
+- Boas práticas de desenvolvimento front-end acessível
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagens: HTML e CSS
 - Biblioteca: Bootstrap
+- Controle de Versão: Git
 
 ## 📄 Licença
 Este projeto está sob a licença MIT.

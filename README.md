@@ -1,4 +1,4 @@
-# MED sobre Acessibilidade e WAI-ARIA
+# MED sobre Acessibilidade Web e WAI-ARIA
 Este projeto é um Material de Educacional Digital (MED) desenvolvido para estudantes de Desenvolvimento Web que desejam aprender sobre Acessibilidade Web e WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
 
 ## 📘 Informações Acadêmicas

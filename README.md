@@ -28,6 +28,11 @@ Este projeto está sob a licença MIT.
 ## 📬 Contato
 rafael.vivian@ifc.edu.br
 
+
+![Wireframe - 1](https://github.com/user-attachments/assets/7218ed6c-a7cf-42ce-b8d7-0d10d4decdfa)
+
+
+
 ---
 
 *Desenvolvido com 💚 e ♿ pelos estudantes da 3a. fase do curso ADS do IFC - Campus Fraiburgo.*  

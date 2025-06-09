@@ -1,0 +1,214 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2F170724e6-3e1c-11e9-9bee-efab61506f44?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+
+section.texto-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+section.texto-section article {
+    margin-bottom: 40px;
+}
+
+section.texto-section h2 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    padding-left: 10px;
+    border-left: 4px solid #198754;
+    color: #198754;
+}
+
+section.texto-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+section[aria-label="Explicação sobre tópicos"] {
+    padding: 40px 60px;
+}
+
+section[aria-label="Explicação sobre tópicos"] h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    padding-left: 10px;
+    border-left: 4px solid #198754;
+    color: #198754;
+}
+
+section[aria-label="Explicação sobre tópicos"] .topico-1,
+section[aria-label="Explicação sobre tópicos"] .topico-2,
+section[aria-label="Explicação sobre tópicos"] .topico-3,
+section[aria-label="Explicação sobre tópicos"] .divisor-verde {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+section[aria-label="Explicação sobre tópicos"] .texto-topico-1,
+section[aria-label="Explicação sobre tópicos"] .texto-topico-2,
+section[aria-label="Explicação sobre tópicos"] .texto-topico-3 {
+    flex: 1;
+    line-height: 1.7;
+    font-size: 1rem;
+    padding-right: 20px;
+    max-width: 700px;
+}
+
+section[aria-label="Explicação sobre tópicos"] .texto-topico-1 h3,
+section[aria-label="Explicação sobre tópicos"] .texto-topico-2 h3,
+section[aria-label="Explicação sobre tópicos"] .texto-topico-3 h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+section[aria-label="Explicação sobre tópicos"] .imagem-topico-1,
+section[aria-label="Explicação sobre tópicos"] .imagem-topico-2 {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section[aria-label="Explicação sobre tópicos"] .imagem-topico-1 img,
+section[aria-label="Explicação sobre tópicos"] .imagem-topico-2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#legenda-imagem-topico-1,
+#legenda-imagem-topico-2 {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.divisor-verde {
+    border: none;
+    height: 4px;
+    width: 70%;
+    background-color: #198754;
+    margin: 40px auto;
+    border-radius: 2px;
+}
+
+.texto-topico-3 p {
+    text-align: justify;
+}
+
+section[aria-label="Vídeo sobre ferramentas de acessibilidade"] {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+section[aria-label="Vídeo sobre ferramentas de acessibilidade"] h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    padding-left: 10px;
+    border-left: 4px solid #198754;
+    color: #198754;
+}
+
+section[aria-label="Vídeo sobre ferramentas de acessibilidade"] h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+section[aria-label="Vídeo sobre ferramentas de acessibilidade"] iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+section[aria-label="hero-wai-aria"] {
+    background-image: url('https://a-us.storyblok.com/f/1015620/4800X2520/4651e07798/aria-accessibility-enhancing-web-usability-for-all_how-accessibility-testing-can-help-you-meet-aria-guidelines_01-16-2024.jpg/m/1920x0/filters:quality(100)');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .footer-top section {
+    flex: 1 1 300px;
+}
+
+footer .titulo-informacoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+footer .titulo-informacoes img {
+    width: 40px;
+    height: auto;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}

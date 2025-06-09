@@ -27,6 +27,13 @@ Este projeto está sob a licença MIT.
 
 ## 📬 Contato
 rafael.vivian@ifc.edu.br
+joaogapires@gmail.com
+andressaantunesdev@gmail.com
+raquelbmarafon@gmail.com
+urbaantuneslaura@gmail.com
+yuribargas@gmail.com
+samudolberth@gmail.com
+jvzeris@gmail.com
 
 ## 📬 Wireframe
 

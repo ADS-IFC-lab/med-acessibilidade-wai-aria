@@ -6,7 +6,7 @@ Este projeto é um Material de Educacional Digital (MED) desenvolvido para estud
 - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
 - Disciplina: Desenvolvimento Web - 3a. fase
 - Professor: Rafael Leonardo Vivian
-- Estudantes: Andressa Antunes, João Pedro de Aquino, Laura Antunes, Raquel Marafon, Samuel Dolberth, Yuri Oliveira
+- Estudantes: Andressa Antunes, João Pedro de Aquino, Laura Antunes, Raquel Marafon, Samuel Dolberth, Yuri Oliveira, João Vítor Oliveira da Inhaia
 
 ## 🎯 Objetivo
 O objetivo deste MED é apresentar conteúdo sobre:
@@ -26,7 +26,21 @@ O objetivo deste MED é apresentar conteúdo sobre:
 Este projeto está sob a licença MIT.
 
 ## 📬 Contato
-rafael.vivian@ifc.edu.br
+- rafael.vivian@ifc.edu.br
+- joaogapires@gmail.com
+- andressaantunesdev@gmail.com
+- raquelbmarafon@gmail.com
+- urbaantuneslaura@gmail.com
+- yuribargas@gmail.com
+- samudolberth@gmail.com
+- jvzeris@gmail.com
+
+## 📬 Wireframe
+
+![Wireframe - 1](https://github.com/user-attachments/assets/7218ed6c-a7cf-42ce-b8d7-0d10d4decdfa)
+
+## 📄 Pesquisa
+https://docs.google.com/document/d/1N4d5flKI9uxsyJsyqTXi5aAS6YlozK7lgOzQ9MiIGAo/edit?usp=sharing
 
 ---
 

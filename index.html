@@ -15,7 +15,7 @@
 
     <script src="https://kit.fontawesome.com/c8de44c573.js" crossorigin="anonymous"></script>
 
-    <title>WAI-ARIA & Acessibilidade</title>
+    <title>WAI-ARIA & Acessibilidade WEB</title>
 </head>
 <body>
 <nav class="navbar bg-success navbar-dark fixed-top" role="banner">
@@ -26,15 +26,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a class="navbar-brand mb-0" href="#">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DXcwyexkm85zOV_Il36DbFbTPi8-u1xb9A&s" alt="Logotipo da instituição" title="Logotipo" width="40" height="32">
+            <a class="navbar-brand mb-0" href="https://www.fraiburgo.ifc.edu.br">
+                <img width="120px" src="https://www.fraiburgo.ifc.edu.br/wp-content/themes/ifc-v2/assets/images/logo-ifc.png" alt="Logotipo da instituição" title="Logotipo" width="40" height="32">
             </a>
         </div>
 
         <div class="d-flex justify-content-center flex-grow-1">
-            <a class="nav-link text-white mx-3" href="#textos-site">Acessibilidade <i class="fa-solid fa-person"></i></a>
+            <a class="nav-link text-white mx-3" href="#textos-site">Acessibilidade WEB <i class="fa-solid fa-person"></i></a>
             <a class="nav-link text-white mx-3" href="#Ferramentas">Ferramentas <i class="fa-solid fa-screwdriver-wrench"></i></a>
             <a class="nav-link text-white mx-3" href="#wai-aria">WAI-ARIA <i class="fa-solid fa-code"></i></a>
+            <a class="nav-link text-white mx-3" href="#quiz">Quiz <i class="fa-solid fa-question"></i></a>
             <a class="nav-link text-white mx-3" href="#Contatos">Contato <i class="fa-solid fa-address-book"></i></a>
         </div>
 
@@ -49,19 +50,26 @@
     <div class="offcanvas-body">
         <nav class="nav flex-column">
 
-            <p class="fw-bold fs-5 mb-2">&bull;Acessibilidade</p>
-            <a class="nav-link text-white ps-3 mb-1" href="#textos-site">Acessibilidade</a>
+            <p class="fw-bold fs-5 mb-2">&bull;Acessibilidade WEB</p>
+            <a class="nav-link text-white ps-3 mb-1" href="#textos-site">Acessibilidade na WEB</a>
             <a class="nav-link text-white ps-3 mb-1" href="#principios">Semântica</a>
             <a class="nav-link text-white ps-3 mb-1" href="#atributos">Atributos</a>
             <a class="nav-link text-white ps-3 mb-1" href="#legislacao">Legislacao</a>
             <a class="nav-link text-white ps-3 mb-3" href="#Ferramentas">Ferramentas</a>
-            
 
             <p class="fw-bold fs-5 mb-2">&bull;WAI-ARIA</p>
             <a class="nav-link text-white ps-3 mb-1" href="#wai-aria">WAI-ARIA</a>
             <a class="nav-link text-white ps-3 mb-1" href="#wai-aria-praticas">Boas Práticas & Funções</a>
             <a class="nav-link text-white ps-3 mb-1" href="#wai-aria-exemplos">Exemplos</a>
 
+            <p class="fw-bold fs-5 mb-2">&bull;Nosso Quiz</p>
+            <a class="nav-link text-white ps-3 mb-1" href="#quiz">Quiz</a>
+
+            <p class="fw-bold fs-5 mb-2">&bull;Outros</p>
+            <a class="nav-link text-white ps-3 mb-1" href="credito.html">Créditos do MED</a>
+            <a class="nav-link text-white ps-3 mb-1" href="guia.html">Guia do MED</a>
+            <a class="nav-link text-white ps-3 mb-1" href="sobre.html">Sobre o MED</a>
+            
         </nav>
     </div>
 </div>
@@ -69,8 +77,11 @@
     <main role="main" aria-label="Conteúdo principal">
         <section id="texto-inicio" class="hero-section">
             <div class="hero-content">
-                <h1>WAI-ARIA & Acessibilidade</h1>
+                <h1>WAI-ARIA & Acessibilidade WEB</h1>
                 <blockquote>
+                    <p>
+                  Seja muito bem-vindo ao Material Educacional Digital sobre Acessibilidade Web e WAI-ARIA, desenvolvido para estudantes de cursos superiores em desenvolvimento web e profissionais da área. O objetivo deste material é apresentar a acessibilidade de forma simples e didática. Aqui, você encontrará conceitos fundamentais, entenderá como a acessibilidade funciona e perceberá sua presença em nosso cotidiano. Este conteúdo foi pensado para despertar sua curiosidade e incentivar o interesse por essa área tão importante! Explore e Aprenda.
+                    </p>
                     <h3>“O poder da web está em sua universalidade. O acesso por todas as pessoas, independentemente da deficiência, é um aspecto essencial”.<br>
                     — Tim Berners-Lee</h3>
                 </blockquote>
@@ -89,6 +100,7 @@
                     garantindo acesso à informação e aos serviços online.
                 </p>
             </article>
+
             <article aria-label="Texto sobre usabilidade e otimização">
                 <h2>Usabilidade e Otimização</h2>
                 <p>
@@ -257,27 +269,40 @@
                                 <div>
                                     <strong>Leitura de textos, botões e menus</strong>
                                 </div>
-                                <span class="badge bg-success">HTML Tags: &lt;button&gt;, &lt;nav&gt;, &lt;menu&gt;, &lt;aria-label&gt;</span>
+                                <span class="badge bg-success">HTML Tags: &lt;button&gt;, &lt;nav&gt;, &lt;menu&gt;</span>
                             </li>
                             <li class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <strong>Identificação de imagens com descrição alternativa</strong>
                                 </div>
-                                <span class="badge bg-success">HTML Tags: &lt;img alt=""&gt;</span>
+                                <span class="badge bg-success">Atributos: &lt;img alt=""&gt;, aria-label</span>
                             </li>
                             <li class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <strong>Compatibilidade com comandos de voz e teclado</strong>
                                 </div>
-                                <span class="badge bg-success">HTML Tags: &lt;input&gt;, &lt;button&gt;, &lt;aria-keyshortcuts&gt;</span>
+                                <span class="badge bg-success">HTML Tags: &lt;input&gt;, &lt;button&gt;</span>
                             </li>
                             <li class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <strong>Suporte a navegação por atalhos</strong>
                                 </div>
-                                <span class="badge bg-success">HTML Tags: &lt;skip-link&gt;, &lt;accesskey&gt;, &lt;aria-label&gt;</span>
+                                <span class="badge bg-success">Atributos: skip-link, accesskey, aria-keyshortcuts</span>
                             </li>
                         </ul>
+                        <div class="row d-flex justify-content-center   justify-content-center">
+                        
+                            <div class="col-md-3 d-flex flex-column justify-content-center align-items-center" aria-label="exemplo aria-expanded">
+                                <img width="260px" height="170px" src="resources/aria-expanded.jpg">
+                            </div>
+                            <div class="col-md-3 d-flex flex-column justify-content-center align-items-center" aria-label="exemplo aria-label">
+                                <img width="260px" height="170px" src="resources/aria-label.jpg">
+                            </div>
+                            <div class="col-md-3 d-flex flex-column justify-content-center align-items-center" aria-label="exemplo alt">
+                                <img width="270px" height="170px" src="resources/alt.jpg">
+                            </div>
+                        
+                        </div>
                     </div>
                 </div>
 
@@ -306,9 +331,6 @@
                             <li class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <strong>
-                                        <img src="https://upload.wikimedia.org/wikipedia/en/7/71/Nuance_Dragon_NaturallySpeaking_logo.png"
-                                            alt="Logo Dragon NaturallySpeaking"
-                                            style="width:24px; height:24px; vertical-align:middle; margin-right:5px;">
                                         Dragon NaturallySpeaking
                                     </strong> — Permite ditar textos e controlar computadores por voz.
                                 </div>
@@ -625,7 +647,7 @@
 <hr class="divisor-verde"/>
 
         <section id="textos-site" class="texto-section">
-            <article aria-label="Texto introdutório sobre quiz no kahoot">
+            <article aria-label="Texto introdutório sobre quiz no Quizizz">
                 <div class="d-flex flex-column justify-content-center align-items-center">
                      <img class="img-fluid" width="500px" height="150px"
                 src="https://hotmart.s3.amazonaws.com/product_pictures/2f4da365-d403-4311-94fe-d51abef9b798/picturequizizz.png" alt="Logo do Quizizz">
@@ -638,7 +660,7 @@
                 
             </article>
         </section>
-<div style="width:100%;display:flex;flex-direction:column;gap:8px;min-height:635px;"><iframe src="https://quizizz.com/embed/quiz/68477c208cfacd7e4b653642" title=" - Quizizz" style="flex:1;" frameBorder="0" allowfullscreen></iframe></div>
+<div id="quiz" style="width:100%;display:flex;flex-direction:column;gap:8px;min-height:635px;"><iframe src="https://quizizz.com/embed/quiz/68477c208cfacd7e4b653642" title=" - Quizizz" style="flex:1;" frameBorder="0" allowfullscreen></iframe></div>
 </main>
 
     <footer role="contentinfo">
@@ -652,7 +674,7 @@
 
         <section aria-label="Informações institucionais">
             <div class="titulo-informacoes">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DXcwyexkm85zOV_Il36DbFbTPi8-u1xb9A&s" alt="Logotipo do IFC Fraiburgo" title="Logotipo IFC" />
+                <img src="https://ifctour-ibirama.com.br/wp-content/uploads/2022/11/logo-ifc-ibirama.png" alt="Logotipo do IFC Fraiburgo" title="Logotipo IFC" />
                 <h2>Informações</h2>
             </div>
             <p>
@@ -674,6 +696,10 @@
                 <li><a href="https://github.com/jvzeris" aria-label="Email 7">jvzeris@gmail.com  <i class="fa-brands fa-github"></i> jvzeris</a></li>
             </ul>
         </section>
+    </div>
+    <div class="footer-bottom justify-content-center text-center ">
+      <div>&copy; Copyright 2025 ADS/IFC. <a class="footer-link" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+        </div> 
     </div>
 </footer>
 

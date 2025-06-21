@@ -213,3 +213,7 @@ footer ul {
 footer ul li {
     margin-bottom: 5px;
 }
+
+.footer-link{
+    color: blue;
+}
